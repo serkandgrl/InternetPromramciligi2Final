@@ -1,0 +1,48 @@
+<div class="coniner">
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="ogrNo">
+      <mat-header-cell *matHeaderCellDef> Öğrenci No
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrNo}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrTC">
+      <mat-header-cell *matHeaderCellDef> Öğrenci TC
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrTC}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrAd">
+      <mat-header-cell *matHeaderCellDef> Öğrenci Adı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrAd}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrSoyad">
+      <mat-header-cell *matHeaderCellDef> Öğrenci Soyadı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrSoyad}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrCinsiyet">
+      <mat-header-cell *matHeaderCellDef> Öğrenci Cinsiyet
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrCinsiyet}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrTelefon">
+      <mat-header-cell *matHeaderCellDef> Öğrenci Telefon
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrTelefon}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrMail">
+      <mat-header-cell *matHeaderCellDef> Öğrenci Mail
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrMail}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ogrBolumKodu">
+      <mat-header-cell *matHeaderCellDef> Öğrenci Bölüm Kodu
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.ogrBolumKodu}} </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

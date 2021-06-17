@@ -1,0 +1,34 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>{{dialogBaslik}}</span>
+</mat-toolbar>
+<div class="container">
+  <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci No</mat-label>
+      <input matInput placeholder="Öğrenci No" formControlName="notOgrenciNo" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Ders Kodu</mat-label>
+      <input matInput placeholder="Ders Kodu" formControlName="notDersKodu" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Vize</mat-label>
+      <input matInput placeholder="Vize" formControlName="notVize" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Final</mat-label>
+      <input matInput placeholder="Final" formControlName="notFinal" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Ortalama</mat-label>
+      <input matInput placeholder="Ortalama" formControlName="notOrtalama" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Not Üye Id</mat-label>
+      <input matInput placeholder="Not Üye Id" formControlName="notUyeId" required>
+    </mat-form-field>
+  </form>
+</div>
+
+<button mat-raised-button color="primary" (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close()">İptal</button>&nbsp;

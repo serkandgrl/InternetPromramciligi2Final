@@ -1,0 +1,58 @@
+<div class="container">
+  <h2>Bölümler</h2>
+  <button mat-fab matTooltip="Bölüm Ekle" color="primary" (click)="Ekle()">
+    <mat-icon aria-label="label">add</mat-icon>
+  </button>
+  <p>&nbsp;
+
+    <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+      <ng-container matColumnDef="bolumKodu">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Bölüm Kodu
+        </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.bolumKodu}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="bolumAdi">
+        <mat-header-cell *matHeaderCellDef> Bölüm Adı
+        </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.bolumAdi}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="bolumAdres">
+        <mat-header-cell *matHeaderCellDef> Bölüm Adres
+        </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.bolumAdres}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="bolumTelefon">
+        <mat-header-cell *matHeaderCellDef> Bölüm Telefon
+        </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.bolumTelefon}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="bolumUyeId">
+        <mat-header-cell *matHeaderCellDef> Bölüm Üye Id
+        </mat-header-cell>
+        <mat-cell *matCellDef="let kayit"> {{kayit.bolumUyeId}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="detay">
+        <mat-header-cell *matHeaderCellDef> İşlemler
+        </mat-header-cell>
+        <mat-cell *matCellDef="let kayit">
+          
+          <button mat-icon-button color="primary" matTooltip="Bölüm Düzenle" (click)="Duzenle(kayit)">
+            <mat-icon aria-label="label">edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" matTooltip="Bölüm Sil" (click)="Sil(kayit)">
+            <mat-icon aria-label="label">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+
+
+
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5,10,25,100]" showFirstLastButtons>
+    </mat-paginator>
+  </p>
+</div>

@@ -1,0 +1,33 @@
+<div class="coniner">
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="notOgrenciNo">
+      <mat-header-cell *matHeaderCellDef> Öğrenci No
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.notOgrenciNo}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="notDersKodu">
+      <mat-header-cell *matHeaderCellDef> Ders Kodu
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.bolumAdi}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="notVize">
+      <mat-header-cell *matHeaderCellDef> Vize
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.notVize}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="notFinal">
+      <mat-header-cell *matHeaderCellDef> Final
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.notFinal}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="notOrtalama">
+      <mat-header-cell *matHeaderCellDef> Ortalama
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.notOrtalama}} </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

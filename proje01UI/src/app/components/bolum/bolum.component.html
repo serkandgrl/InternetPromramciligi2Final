@@ -1,0 +1,28 @@
+<div class="coniner">
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="bolumKodu">
+      <mat-header-cell *matHeaderCellDef> Bölüm Kodu
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.bolumKodu}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="bolumAdi">
+      <mat-header-cell *matHeaderCellDef> Bölüm Adı
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.bolumAdi}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="bolumAdres">
+      <mat-header-cell *matHeaderCellDef> Bölüm Adresi
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.bolumAdres}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="bolumTelefon">
+      <mat-header-cell *matHeaderCellDef> Bölüm Telefon
+      </mat-header-cell>
+      <mat-cell *matCellDef="let kayit"> {{kayit.bolumTelefon}} </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

@@ -1,0 +1,46 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>{{dialogBaslik}}</span>
+</mat-toolbar>
+<div class="container">
+  <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci No</mat-label>
+      <input matInput placeholder="Öğrenci No" formControlName="ogrNo" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci TC</mat-label>
+      <input matInput placeholder="Öğrenci TC" formControlName="ogrTC" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Adı</mat-label>
+      <input matInput placeholder="Öğrenci Adı" formControlName="ogrAd" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Soyadı</mat-label>
+      <input matInput placeholder="Öğrenci Soyadı" formControlName="ogrSoyad" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Cinsiyet</mat-label>
+      <input matInput placeholder="Öğrenci Cinsiyet" formControlName="ogrCinsiyet" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Telefon</mat-label>
+      <input matInput placeholder="Öğrenci Telefon" formControlName="ogrTelefon" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Mail</mat-label>
+      <input matInput placeholder="Öğrenci Mail" formControlName="ogrMail" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Bölüm Kodu</mat-label>
+      <input matInput placeholder="Öğrenci Bölüm Kodu" formControlName="ogrBolumKodu" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Öğrenci Üye Id</mat-label>
+      <input matInput placeholder="Öğrenci Üye Id" formControlName="ogrUyeId" required>
+    </mat-form-field>
+  </form>
+</div>
+
+<button mat-raised-button color="primary" (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close()">İptal</button>&nbsp;
